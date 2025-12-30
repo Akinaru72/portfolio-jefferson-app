@@ -2,127 +2,421 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/portfolio-jefferson-app/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <script type="module" crossorigin src="/portfolio-jefferson-app/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/portfolio-jefferson-app/assets/styles-DvPDDfy5.css">
+    <title>portfolio-app</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" crossorigin href="/portfolio-jefferson-app/assets/index-CwaVf01X.css">
   </head>
   <body>
-    <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="/portfolio-jefferson-app/assets/sprite-E8vg0sBb.svg#logo"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-
+    <!-- Page Header -->
+    <header class="header-page">
+      <div class="container">
+        <div class="box-logo">
+          <picture>
+            <source
+              srcset="/portfolio-jefferson-app/assets/header-1x-DDx1zfv9.png 1x, /portfolio-jefferson-app/assets/header-2x-rUPH-tlR.png 2x"
+            />
+            <img src="/portfolio-jefferson-app/assets/header-1x-DDx1zfv9.png" alt="Jefferson" />
+          </picture>
+          <a href="https://akinaru72.github.io/portfolio-app/">
+            <svg class="header-logo">
+              <use href="/portfolio-jefferson-app/assets/sprite-CzgV2uP7.svg#icon-logo"></use>
+            </svg>
+          </a>
+        </div>
+        <nav class="header-navigation">
+          <button class="header-menu-button" type="button">Menu</button>
+          <ul class="header-nav">
+            <li class="header-nav-link"><a href="#about-me">About me</a></li>
+            <li class="header-nav-link"><a href="#benefits">Benefits</a></li>
+            <li class="header-nav-link"><a href="#projects">Projects</a></li>
+            <li class="header-nav-link"><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+        <a class="header-wtg" href="#work-together">Order the project</a>
+        <button class="header-open-button" type="button">
+          <svg class="open-modal-icon">
+            <use href="/portfolio-jefferson-app/assets/sprite-CzgV2uP7.svg#open-modal"></use>
+          </svg>
+        </button>
+        <div class="modal-window">
+          <button class="header-close-button" type="button">
+            <svg class="close-modal-icon">
+              <use href="/portfolio-jefferson-app/assets/sprite-CzgV2uP7.svg#close-modal"></use>
+            </svg>
+          </button>
+          <ul class="modal-menu">
+            <li class="modal-menu-link"><a href="#about-me">About me</a></li>
+            <li class="modal-menu-link"><a href="#benefits">Benefits</a></li>
+            <li class="modal-menu-link"><a href="#projects">Projects</a></li>
+            <li class="modal-menu-link"><a href="#faq">FAQ</a></li>
+          </ul>
+          <a class="modal-menu-wtg" href="#work-together">Order the project</a>
+        </div>
+      </div>
+    </header>
     <main>
-      <!-- Loads the specified .html file -->
-      <section class="vite-promo">
-  <div class="container">
-    <div class="vite-promo-thumb">
-      <a
-        class="vite-promo-link"
-        href="https://vitejs.dev/"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Link to Vite official website"
-        title="Vite.js  build tool"
-      >
-        <!-- Path to images as from index.html file -->
-        <img
-          class="pic"
-          src="/portfolio-jefferson-app/assets/vite-logo-9o_aqrTe.png"
-          alt="Vite logo"
-          width="640"
-          height="640"
-        />
-      </a>
-    </div>
-    <h1 class="main-title">
-      <span class="main-title-gradient">Vite</span>
-      Template by
-      <a
-        class="main-title-link"
-        href="https://github.com/goitacademy/vanilla-app-template"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT
-      </a>
-    </h1>
-  </div>
-</section>
-
-      <article class="badges">
-  <div class="container">
-    <ul class="badges-list">
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-html-inject"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          HTML Inject
-        </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/vite-plugin-full-reload"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Full Reload
-        </a>
-      </li>
-      <li class="badges-item">
-        <a
-          class="badges-link"
-          href="https://www.npmjs.com/package/postcss-sort-media-queries"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Sort Media Queries
-        </a>
-      </li>
-    </ul>
-  </div>
-</article>
-
+      <!-- Page Hero -->
+      <section class="hero-page">
+        <div class="container">
+          <h1 class="title-main">
+            <span class="hello">Hello.</span> I’m&nbsp;Fullstack developer Lloyd
+            Jefferson.
+          </h1>
+          <ul class="hero-list">
+            <li>
+              <a class="hero-link" href="https://www.instagram.com/goitclub/"
+                >IG</a
+              >
+            </li>
+            <li>
+              <a class="hero-link" href="https://www.facebook.com/goITclub/"
+                >FB</a
+              >
+            </li>
+            <li>
+              <a class="hero-link" href="https://www.youtube.com/c/GoIT">YT</a>
+            </li>
+            <li>
+              <a
+                class="hero-link"
+                href="https://github.com/Akinaru72/portfolio-app"
+                >GH</a
+              >
+            </li>
+            <li class="hero-link address">
+              <a href="mailto:lloydjefferson@gmail.com"
+                >lloydjefferson@gmail.com</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Page Benefits -->
+      <section class="page-benefits" id="benefits">
+        <div class="container">
+          <h2 class="title-second">Benefits of working with me</h2>
+          <div>
+            <ul class="benefits-list">
+              <li class="benefits-link">
+                <svg class="benefits-icons">
+                  <use href="/portfolio-jefferson-app/assets/sprite-CzgV2uP7.svg#icon-expertise"></use>
+                </svg>
+                <h3 class="title-third">Expertise</h3>
+                <p class="main-text">
+                  As a highly experienced developer, I have deep knowledge of
+                  programming and website development.
+                </p>
+              </li>
+              <li class="benefits-link">
+                <svg class="benefits-icons">
+                  <use href="/portfolio-jefferson-app/assets/sprite-CzgV2uP7.svg#icon-communication"></use>
+                </svg>
+                <h3 class="title-third">Communication</h3>
+                <p class="main-text">
+                  Understanding your needs and wants is my priority and I am
+                  always open to discussions and corrections.
+                </p>
+              </li>
+              <li class="benefits-link">
+                <svg class="benefits-icons">
+                  <use href="/portfolio-jefferson-app/assets/sprite-CzgV2uP7.svg#icon-art"></use>
+                </svg>
+                <h3 class="title-third">Art</h3>
+                <p class="main-text">
+                  Thanks to my creative nature, I am ready to accept challenges
+                  and help you bring your ideas to life.
+                </p>
+              </li>
+              <li class="benefits-link">
+                <svg class="benefits-icons">
+                  <use href="/portfolio-jefferson-app/assets/sprite-CzgV2uP7.svg#icon-urgent-execution"></use>
+                </svg>
+                <h3 class="title-third">Urgent execution</h3>
+                <p class="main-text">
+                  I understand how important time is to you. Ready to work
+                  quickly and efficiently, without reducing the quality of work.
+                </p>
+              </li>
+            </ul>
+            <a class="benefits-btn" href="#work-together">Order the project </a>
+          </div>
+        </div>
+      </section>
+      <section class="page-projects" id="projects">
+        <div class="container">
+          <h2 class="title-second">Projects</h2>
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="swiper-slide-begin">
+                  <ul class="swiper-slide-list">
+                    <li class="swiper-slide-item">#react</li>
+                    <li class="swiper-slide-item">#js</li>
+                    <li class="swiper-slide-item">#node js</li>
+                    <li class="swiper-slide-item">#git</li>
+                  </ul>
+                  <h3 class="projects-text">
+                    Programming Across Borders: Ideas, Technologies, Innovations
+                  </h3>
+                  <a
+                    class="projects-btn"
+                    href="https://github.com/Akinaru72/portfolio-app"
+                    >See project</a
+                  >
+                </div>
+                <div class="swiper-slide-end">
+                  <picture class="swiper-slide-picture">
+                    <source
+                      srcset="/portfolio-jefferson-app/assets/project-tablet-1-1x-K83EM2mE.png 1x, /portfolio-jefferson-app/assets/project-tablet-1-2x-DT62PEO_.png 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="/portfolio-jefferson-app/assets/project-mobile-1-1x-BP1AR2tg.png 1x, /portfolio-jefferson-app/assets/project-mobile-1-2x-DYkRW8JP.png 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="/portfolio-jefferson-app/assets/project-mobile-1-1x-BP1AR2tg.png"
+                      alt="Expand your mind reading, a book"
+                    />
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide-begin">
+                  <ul class="swiper-slide-list">
+                    <li class="swiper-slide-item">#react</li>
+                    <li class="swiper-slide-item">#js</li>
+                    <li class="swiper-slide-item">#node js</li>
+                    <li class="swiper-slide-item">#git</li>
+                  </ul>
+                  <h3 class="projects-text">
+                    Programming Across Borders: Ideas, Technologies, Innovations
+                  </h3>
+                  <a
+                    class="projects-btn"
+                    href="https://github.com/Akinaru72/portfolio-app"
+                    >See project</a
+                  >
+                </div>
+                <div class="swiper-slide-end">
+                  <picture class="swiper-slide-picture">
+                    <source
+                      srcset="/portfolio-jefferson-app/assets/projects-tablet-2-1x-C83ZxMNj.jpg 1x, /portfolio-jefferson-app/assets/projects-tablet-2-2x-xfFUWK03.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="/portfolio-jefferson-app/assets/project-mobile-2-1x-CHcdatp_.jpg 1x, /portfolio-jefferson-app/assets/project-mobile-2-2x-AhKMGlyQ.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="/portfolio-jefferson-app/assets/project-mobile-2-1x-CHcdatp_.jpg"
+                      alt="pet with man and woman"
+                    />
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide-begin">
+                  <ul class="swiper-slide-list">
+                    <li class="swiper-slide-item">#react</li>
+                    <li class="swiper-slide-item">#js</li>
+                    <li class="swiper-slide-item">#node js</li>
+                    <li class="swiper-slide-item">#git</li>
+                  </ul>
+                  <h3 class="projects-text">
+                    Programming Across Borders: Ideas, Technologies, Innovations
+                  </h3>
+                  <a
+                    class="projects-btn"
+                    href="https://github.com/Akinaru72/portfolio-app"
+                    >See project
+                  </a>
+                </div>
+                <div class="swiper-slide-end">
+                  <picture class="swiper-slide-picture">
+                    <source
+                      srcset="/portfolio-jefferson-app/assets/projects-tablet-3-1x-DSK9mI3s.jpg 1x, /portfolio-jefferson-app/assets/projects-tablet-3-2x-Ddg8ZXL8.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="/portfolio-jefferson-app/assets/project-mobile-3-1x-Cg7Wdefl.jpg 1x, /portfolio-jefferson-app/assets/project-mobile-3-2x-DkF6VjXB.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="/portfolio-jefferson-app/assets/project-mobile-3-1x-Cg7Wdefl.jpg"
+                      alt="VocabBuilder"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-all">
+              <div class="swiper-button-prev">
+                <svg class="projects-icons">
+                  <use href="/portfolio-jefferson-app/assets/sprite-CzgV2uP7.svg#icon-left"></use>
+                </svg>
+              </div>
+              <div class="swiper-button-next">
+                <svg class="projects-icons">
+                  <use href="/portfolio-jefferson-app/assets/sprite-CzgV2uP7.svg#icon-right"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page-cover">
+        <h2 class="visually-hidden">Cover</h2>
+        <div class="container">
+          <div class="content">
+            <div class="marquee">
+              <div class="marquee__inner">
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="/portfolio-jefferson-app/assets/cover-1-DtQIIWSp.png"
+                    alt="turn your business into an online leader "
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="/portfolio-jefferson-app/assets/cover-2-CPFSVkUo.png"
+                    alt="get body in shape, stay healthy"
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="/portfolio-jefferson-app/assets/cover-3-AwOFJMz8.png"
+                    alt="fresh harvest fruits basket"
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="/portfolio-jefferson-app/assets/cover-4-CWmk66Z5.png"
+                    alt="a brand inspired by forms"
+                  />
+                </p>
+              </div>
+              <div class="marquee__inner">
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="/portfolio-jefferson-app/assets/cover-4-CWmk66Z5.png"
+                    alt="a brand inspired by forms"
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="/portfolio-jefferson-app/assets/cover-5-CySCTRta.png"
+                    alt="mimino"
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="/portfolio-jefferson-app/assets/cover-6-DDYmhxPK.png"
+                    alt="tradional ukraine artystry"
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="/portfolio-jefferson-app/assets/cover-7-CUp5nmqW.png"
+                    alt="organic vegetables"
+                  />
+                </p>
+              </div>
+              <div class="marquee__inner">
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="/portfolio-jefferson-app/assets/cover-7-CUp5nmqW.png"
+                    alt="organic vegetables"
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="/portfolio-jefferson-app/assets/cover-8-DRfBqzua.png"
+                    alt="body shape with power pulse"
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="/portfolio-jefferson-app/assets/cover-9-DUkVMo4A.png"
+                    alt="manage your finances"
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="/portfolio-jefferson-app/assets/cover-10-C1PDtuCz.png"
+                    alt="learning English"
+                  />
+                </p>
+              </div>
+              <div class="marquee__inner">
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="/portfolio-jefferson-app/assets/cover-1-DtQIIWSp.png"
+                    alt="turn your business into an online leader "
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="/portfolio-jefferson-app/assets/cover-2-CPFSVkUo.png"
+                    alt="get body in shape, stay healthy"
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="/portfolio-jefferson-app/assets/cover-3-AwOFJMz8.png"
+                    alt="fresh harvest fruits basket"
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="/portfolio-jefferson-app/assets/cover-4-CWmk66Z5.png"
+                    alt="a brand inspired by forms"
+                  />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-
-    <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
-  </div>
-</footer>
-
-
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
