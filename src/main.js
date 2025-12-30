@@ -1,3 +1,8 @@
+import Swiper from 'swiper/bundle';
+
+// import styles bundle
+import 'swiper/css/bundle';
+
 const openBtn = document.querySelector('.header-open-button');
 const closeBtn = document.querySelector('.close-modal-icon');
 

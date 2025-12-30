@@ -216,7 +216,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   overflow: auto;
   opacity: 0;
@@ -247,8 +247,7 @@ body {
   background-image: url(../img/header/bg-1x.png);
   background-repeat: no-repeat;
   background-position: left top;
-  background-size: auto 100%;
-  background-size: cover;
+  background-size: calc(100% + 1px) 100%;
   transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -664,12 +663,18 @@ body {
 
 .swiper-button-next,
 .swiper-button-prev {
-  position: static;
+  position: static !important;
   transform: none;
-  color: transparent;
+  color: transparent !important;
   --swiper-navigation-size: 52px;
-  margin-left: 0;
+  margin-left: 0 !important;
   margin-top: 0 !important;
+}
+
+.swiper-button-disabled {
+  opacity: 0.3 !important;
+  filter: grayscale(1) !important;
+  transform: scale(0.9) !important;
 }
 
 .swiper-button-all {
