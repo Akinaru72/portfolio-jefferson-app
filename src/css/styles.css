@@ -757,6 +757,9 @@ body {
 }
 
 /* ----------------end projects------------------- */
+/* --------------------faq------------------------ */
+/* -------------------end faq--------------------- */
+
 /* -------------------cover====------------------- */
 .page-cover .container {
   padding: 0;
@@ -804,6 +807,13 @@ body {
   width: 282px;
   height: 163px;
   padding: 10px;
+}
+
+.cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 @keyframes marqueeLine {
