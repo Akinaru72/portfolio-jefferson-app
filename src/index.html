@@ -2,22 +2,442 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>portfolio-app</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
-
+    <!-- Page Header -->
+    <header class="header-page">
+      <div class="container">
+        <div class="box-logo">
+          <picture>
+            <source
+              srcset="
+                ./img/header/header-1x.png 1x,
+                ./img/header/header-2x.png 2x
+              "
+            />
+            <img src="./img/header/header-1x.png" alt="Jefferson" />
+          </picture>
+          <a href="https://akinaru72.github.io/portfolio-app/">
+            <svg class="header-logo">
+              <use href="./img/sprite.svg#icon-logo"></use>
+            </svg>
+          </a>
+        </div>
+        <nav class="header-navigation">
+          <button class="header-menu-button" type="button">Menu</button>
+          <ul class="header-nav">
+            <li class="header-nav-link"><a href="#about-me">About me</a></li>
+            <li class="header-nav-link"><a href="#benefits">Benefits</a></li>
+            <li class="header-nav-link"><a href="#projects">Projects</a></li>
+            <li class="header-nav-link"><a href="#faq">FAQ</a></li>
+          </ul>
+        </nav>
+        <a class="header-wtg" href="#work-together">Order the project</a>
+        <button class="header-open-button" type="button">
+          <svg class="open-modal-icon">
+            <use href="./img/sprite.svg#open-modal"></use>
+          </svg>
+        </button>
+        <div class="modal-window">
+          <button class="header-close-button" type="button">
+            <svg class="close-modal-icon">
+              <use href="./img/sprite.svg#close-modal"></use>
+            </svg>
+          </button>
+          <ul class="modal-menu">
+            <li class="modal-menu-link"><a href="#about-me">About me</a></li>
+            <li class="modal-menu-link"><a href="#benefits">Benefits</a></li>
+            <li class="modal-menu-link"><a href="#projects">Projects</a></li>
+            <li class="modal-menu-link"><a href="#faq">FAQ</a></li>
+          </ul>
+          <a class="modal-menu-wtg" href="#work-together">Order the project</a>
+        </div>
+      </div>
+    </header>
     <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+      <!-- Page Hero -->
+      <section class="hero-page">
+        <div class="container">
+          <h1 class="title-main">
+            <span class="hello">Hello.</span> I’m&nbsp;Fullstack developer Lloyd
+            Jefferson.
+          </h1>
+          <ul class="hero-list">
+            <li>
+              <a class="hero-link" href="https://www.instagram.com/goitclub/"
+                >IG</a
+              >
+            </li>
+            <li>
+              <a class="hero-link" href="https://www.facebook.com/goITclub/"
+                >FB</a
+              >
+            </li>
+            <li>
+              <a class="hero-link" href="https://www.youtube.com/c/GoIT">YT</a>
+            </li>
+            <li>
+              <a
+                class="hero-link"
+                href="https://github.com/Akinaru72/portfolio-app"
+                >GH</a
+              >
+            </li>
+            <li class="hero-link address">
+              <a href="mailto:lloydjefferson@gmail.com"
+                >lloydjefferson@gmail.com</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- Page Benefits -->
+      <section class="page-benefits" id="benefits">
+        <div class="container">
+          <h2 class="title-second">Benefits of working with me</h2>
+          <div>
+            <ul class="benefits-list">
+              <li class="benefits-link">
+                <svg class="benefits-icons">
+                  <use href="./img/sprite.svg#icon-expertise"></use>
+                </svg>
+                <h3 class="title-third">Expertise</h3>
+                <p class="main-text">
+                  As a highly experienced developer, I have deep knowledge of
+                  programming and website development.
+                </p>
+              </li>
+              <li class="benefits-link">
+                <svg class="benefits-icons">
+                  <use href="./img/sprite.svg#icon-communication"></use>
+                </svg>
+                <h3 class="title-third">Communication</h3>
+                <p class="main-text">
+                  Understanding your needs and wants is my priority and I am
+                  always open to discussions and corrections.
+                </p>
+              </li>
+              <li class="benefits-link">
+                <svg class="benefits-icons">
+                  <use href="./img/sprite.svg#icon-art"></use>
+                </svg>
+                <h3 class="title-third">Art</h3>
+                <p class="main-text">
+                  Thanks to my creative nature, I am ready to accept challenges
+                  and help you bring your ideas to life.
+                </p>
+              </li>
+              <li class="benefits-link">
+                <svg class="benefits-icons">
+                  <use href="./img/sprite.svg#icon-urgent-execution"></use>
+                </svg>
+                <h3 class="title-third">Urgent execution</h3>
+                <p class="main-text">
+                  I understand how important time is to you. Ready to work
+                  quickly and efficiently, without reducing the quality of work.
+                </p>
+              </li>
+            </ul>
+            <a class="benefits-btn" href="#work-together">Order the project </a>
+          </div>
+        </div>
+      </section>
+      <section class="page-projects" id="projects">
+        <div class="container">
+          <h2 class="title-second">Projects</h2>
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="swiper-slide-begin">
+                  <ul class="swiper-slide-list">
+                    <li class="swiper-slide-item">#react</li>
+                    <li class="swiper-slide-item">#js</li>
+                    <li class="swiper-slide-item">#node js</li>
+                    <li class="swiper-slide-item">#git</li>
+                  </ul>
+                  <h3 class="projects-text">
+                    Programming Across Borders: Ideas, Technologies, Innovations
+                  </h3>
+                  <a
+                    class="projects-btn"
+                    href="https://github.com/Akinaru72/portfolio-app"
+                    >See project</a
+                  >
+                </div>
+                <div class="swiper-slide-end">
+                  <picture class="swiper-slide-picture">
+                    <source
+                      srcset="
+                        ./img/projects/project-tablet-1-1x.png 1x,
+                        ./img/projects/project-tablet-1-2x.png 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/projects/project-mobile-1-1x.png 1x,
+                        ./img/projects/project-mobile-1-2x.png 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./img/projects/project-mobile-1-1x.png"
+                      alt="Expand your mind reading, a book"
+                    />
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide-begin">
+                  <ul class="swiper-slide-list">
+                    <li class="swiper-slide-item">#react</li>
+                    <li class="swiper-slide-item">#js</li>
+                    <li class="swiper-slide-item">#node js</li>
+                    <li class="swiper-slide-item">#git</li>
+                  </ul>
+                  <h3 class="projects-text">
+                    Programming Across Borders: Ideas, Technologies, Innovations
+                  </h3>
+                  <a
+                    class="projects-btn"
+                    href="https://github.com/Akinaru72/portfolio-app"
+                    >See project</a
+                  >
+                </div>
+                <div class="swiper-slide-end">
+                  <picture class="swiper-slide-picture">
+                    <source
+                      srcset="
+                        ./img/projects/projects-tablet-2-1x.jpg 1x,
+                        ./img/projects/projects-tablet-2-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/projects/project-mobile-2-1x.jpg 1x,
+                        ./img/projects/project-mobile-2-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./img/projects/project-mobile-2-1x.jpg"
+                      alt="pet with man and woman"
+                    />
+                  </picture>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide-begin">
+                  <ul class="swiper-slide-list">
+                    <li class="swiper-slide-item">#react</li>
+                    <li class="swiper-slide-item">#js</li>
+                    <li class="swiper-slide-item">#node js</li>
+                    <li class="swiper-slide-item">#git</li>
+                  </ul>
+                  <h3 class="projects-text">
+                    Programming Across Borders: Ideas, Technologies, Innovations
+                  </h3>
+                  <a
+                    class="projects-btn"
+                    href="https://github.com/Akinaru72/portfolio-app"
+                    >See project
+                  </a>
+                </div>
+                <div class="swiper-slide-end">
+                  <picture class="swiper-slide-picture">
+                    <source
+                      srcset="
+                        ./img/projects/projects-tablet-3-1x.jpg 1x,
+                        ./img/projects/projects-tablet-3-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./img/projects/project-mobile-3-1x.jpg 1x,
+                        ./img/projects/project-mobile-3-2x.jpg 2x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <img
+                      src="./img/projects/project-mobile-3-1x.jpg"
+                      alt="VocabBuilder"
+                    />
+                  </picture>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-all">
+              <div class="swiper-button-prev">
+                <svg class="projects-icons">
+                  <use href="./img/sprite.svg#icon-left"></use>
+                </svg>
+              </div>
+              <div class="swiper-button-next">
+                <svg class="projects-icons">
+                  <use href="./img/sprite.svg#icon-right"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page-cover">
+        <h2 class="visually-hidden">Cover</h2>
+        <div class="container">
+          <div class="content">
+            <div class="marquee">
+              <div class="marquee__inner">
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="./img/cover/cover-1.png"
+                    alt="turn your business into an online leader "
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="./img/cover/cover-2.png"
+                    alt="get body in shape, stay healthy"
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="./img/cover/cover-3.png"
+                    alt="fresh harvest fruits basket"
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="./img/cover/cover-4.png"
+                    alt="a brand inspired by forms"
+                  />
+                </p>
+              </div>
+              <div class="marquee__inner">
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="./img/cover/cover-4.png"
+                    alt="a brand inspired by forms"
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="./img/cover/cover-5.png"
+                    alt="mimino"
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="./img/cover/cover-6.png"
+                    alt="tradional ukraine artystry"
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="./img/cover/cover-7.png"
+                    alt="organic vegetables"
+                  />
+                </p>
+              </div>
+              <div class="marquee__inner">
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="./img/cover/cover-7.png"
+                    alt="organic vegetables"
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="./img/cover/cover-8.png"
+                    alt="body shape with power pulse"
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="./img/cover/cover-9.png"
+                    alt="manage your finances"
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="./img/cover/cover-10.png"
+                    alt="learning English"
+                  />
+                </p>
+              </div>
+              <div class="marquee__inner">
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="./img/cover/cover-1.png"
+                    alt="turn your business into an online leader "
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="./img/cover/cover-2.png"
+                    alt="get body in shape, stay healthy"
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="./img/cover/cover-3.png"
+                    alt="fresh harvest fruits basket"
+                  />
+                </p>
+                <p class="marquee__line">
+                  <img
+                    class="cover-image"
+                    src="./img/cover/cover-4.png"
+                    alt="a brand inspired by forms"
+                  />
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-
-    <load src="./partials/footer.html" />
-
-    <script type="module" src="./main.js"></script>
+    <footer></footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
