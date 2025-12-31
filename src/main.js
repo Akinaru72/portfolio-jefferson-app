@@ -1,7 +1,7 @@
 import Swiper from 'swiper/bundle';
-
-// import styles bundle
 import 'swiper/css/bundle';
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
 
 const openBtn = document.querySelector('.header-open-button');
 const closeBtn = document.querySelector('.close-modal-icon');
@@ -45,3 +45,5 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+new Accordion('.accordion-container');
