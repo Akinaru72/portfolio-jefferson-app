@@ -1328,3 +1328,316 @@ body {
 }
 
 /* -----------------end reviews------------------- */
+/* -----------------work together----------------- */
+.page-wt .container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.image-wt {
+  width: 44px;
+  height: 44px;
+}
+
+.title-wt {
+  padding-top: 32px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 4px;
+  column-gap: 8px;
+  align-items: center;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #fafafa;
+}
+
+.color-wt {
+  color: #ed3b44;
+}
+
+.together {
+  width: 100%;
+}
+
+.wt-feedback-form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 63px;
+}
+
+.wt-input {
+  padding-bottom: 20px;
+  width: 100%;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  margin-bottom: 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wt-textarea {
+  padding-bottom: 20px;
+  color: #ffffff;
+  width: 100%;
+  height: 44px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  margin-bottom: 32px;
+
+  resize: none;
+  overflow-y: hidden;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wt-input:hover,
+.wt-input:focus,
+.wt-textarea:hover,
+.wt-textarea:focus {
+  border-color: #ffffff;
+}
+
+.wt-input::placeholder,
+.wt-textarea::placeholder {
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.2);
+}
+
+.wt-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  background-color: #ed3b44;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  border: none;
+  margin-bottom: 64px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wt-btn:hover,
+.wt-btn:focus {
+  background-color: #e0373f;
+  color: aquamarine;
+}
+
+.wt-list {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.wt-item {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  padding: 10px 12px;
+
+  width: 178px;
+  height: 37px;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wt-item:focus,
+.wt-item:hover {
+  border-color: aquamarine;
+  color: aquamarine;
+}
+
+@media screen and (min-width: 768px) {
+  .page-wt .container {
+    padding-top: 48px;
+    padding-bottom: 169px;
+  }
+
+  .image-wt {
+    width: 70px;
+    height: 70px;
+  }
+
+  .title-wt {
+    padding-top: 80px;
+    row-gap: 7px;
+    column-gap: 20px;
+    font-size: 64px;
+  }
+
+  .wt-feedback-form {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 32px;
+    padding-top: 18px;
+  }
+
+  .wt-input {
+    margin-top: 56px;
+    padding: 0 0 20px 0;
+    width: 245px;
+    height: 44px;
+    margin-bottom: 0;
+  }
+
+  .wt-textarea {
+    margin-top: 56px;
+    padding: 0 0 20px 0;
+    width: 245px;
+    height: 44px;
+    margin-bottom: 0;
+  }
+
+  .wt-btn {
+    height: 150px;
+    width: 150px;
+    margin-bottom: 18px;
+  }
+
+  .wt-list {
+    gap: 8px;
+  }
+
+  .wt-item {
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 60px;
+    padding: 18px 32px;
+    width: 239px;
+    height: 55px;
+    font-size: 16px;
+  }
+
+  .wt-list .wt-item:last-child {
+    width: 173px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .page-wt .container {
+    padding-top: 82px;
+    padding-left: 164px;
+    padding-right: 164px;
+  }
+
+  .title-wt {
+    padding-top: 85px;
+  }
+
+  .wt-input,
+  .wt-textarea {
+    width: 390px;
+  }
+
+  .wt-textarea {
+    margin-right: 54px;
+  }
+}
+/* --------------end work together---------------- */
+/* --------------footer modal window-------------- */
+
+.wt-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(28, 29, 32, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wt-modal-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wt-modal {
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  border-radius: 20px;
+  padding: 64px 32px;
+  background-color: #1c1d20;
+  overflow: auto;
+  position: relative;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.wt-modal-close-button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  top: 20px;
+  right: 20px;
+}
+
+.wt-close-modal-icon {
+  width: 22px;
+  height: 22px;
+  stroke: #fafafa;
+  transition: stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wt-header-close-button:hover .close-modal-icon,
+.wt-header-close-button:focus .close-modal-icon {
+  stroke: aquamarine;
+}
+
+.wt-modal-title {
+  width: 279px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.wt-modal-message {
+  width: 279px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: rgba(250, 250, 250, 0.6);
+}
+
+@media screen and (min-width: 768px) {
+  .wt-modal {
+    padding: 64px;
+  }
+
+  .wt-close-modal-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .wt-modal-title,
+  .wt-modal-message {
+    width: 364px;
+  }
+}
+/* ------------end footer modal window------------ */

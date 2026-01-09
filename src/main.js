@@ -2,8 +2,10 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
-import { getFetchReviews } from './js/api';
+import { getFetchReviews, postFetchRequest } from './js/api';
 import { createSlideCard } from './js/render-functions';
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 
 const openBtn = document.querySelector('.header-open-button');
 const closeBtn = document.querySelector('.close-modal-icon');
@@ -12,6 +14,11 @@ const nav = document.querySelector('.header-nav');
 const modWindow = document.querySelector('.modal-window');
 const closeLinkWin = document.querySelectorAll('.modal-menu, .modal-menu-wtg');
 const closeLinkNav = document.querySelector('.modal-menu-link');
+const formEl = document.querySelector('.wt-feedback-form');
+const closeBtnWt = document.querySelector('.wt-modal-close-button');
+const modalWT = document.querySelector('.wt-modal-backdrop');
+const modalWTtitle = document.querySelector('.wt-modal-title');
+const modalWTmessage = document.querySelector('.wt-modal-message');
 
 menuBtn.addEventListener('click', () => {
   nav.classList.toggle('is-open');
@@ -36,6 +43,20 @@ closeLinkWin.forEach(link => {
     modWindow.classList.remove('is-open');
     document.body.classList.remove('no-scroll');
   });
+});
+
+closeBtnWt.addEventListener('click', closeModalWT);
+
+function onEscClose(e) {
+  if (e.key === 'Escape') {
+    closeModalWT();
+  }
+}
+
+modalWT.addEventListener('click', e => {
+  if (e.target === modalWT) {
+    closeModalWT();
+  }
 });
 
 new Accordion('.accordion-container.faq', {
@@ -109,7 +130,9 @@ const revSwiper = new Swiper('.swiper.reviews', {
 const getInfoReviews = async () => {
   try {
     const response = await getFetchReviews();
+
     console.log(response.data);
+
     createSlideCard(response.data);
   } catch (err) {
     console.log(err);
@@ -117,6 +140,70 @@ const getInfoReviews = async () => {
 };
 
 getInfoReviews();
+
+function openModalWT(data) {
+  modalWT.classList.add('is-open');
+  document.body.classList.add('no-scroll');
+  modalWTmessage.textContent = data.message;
+  modalWTtitle.textContent = data.title;
+  document.addEventListener('keydown', onEscClose);
+}
+
+function closeModalWT() {
+  modalWT.classList.remove('is-open');
+  document.body.classList.remove('no-scroll');
+  modalWTmessage.textContent = '';
+  modalWTtitle.textContent = '';
+  document.removeEventListener('keydown', onEscClose);
+}
+
+const onSubmitForm = async event => {
+  event.preventDefault();
+
+  const form = event.target;
+
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+
+  const email = event.target.email.value.trim();
+  const comment = event.target.message.value.trim();
+
+  const requestData = {
+    email,
+    comment,
+  };
+
+  if (comment.length < 5) {
+    iziToast.error({
+      message: `❌ comment is too short`,
+      position: 'topRight',
+      timeout: 4000,
+    });
+    return;
+  }
+
+  try {
+    const response = await postFetchRequest(requestData);
+    console.log(response.data.title);
+    console.log(response.data.message);
+
+    // alert('Заявка успішно відправлена!');
+
+    openModalWT(response.data);
+    formEl.reset();
+  } catch (err) {
+    console.log(err);
+    iziToast.error({
+      message: `❌ Error, try again`,
+      position: 'topRight',
+      timeout: 4000,
+    });
+  }
+};
+
+formEl.addEventListener('submit', onSubmitForm);
 
 document.querySelector('.am-button-next').addEventListener('click', () => {
   amSwiper.slideNext();

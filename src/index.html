@@ -54,6 +54,7 @@
             <use href="./img/sprite.svg#open-modal"></use>
           </svg>
         </button>
+        <!-- Modal Window Header -->
         <div class="modal-window">
           <button class="header-close-button" type="button">
             <svg class="close-modal-icon">
@@ -860,7 +861,73 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <!-- Page Work Together -->
+    <footer class="page-wt" id="work-together">
+      <div class="container">
+        <h2 class="title-wt">
+          <picture class="picture-wt">
+            <source
+              srcset="
+                ./img/header/header-1x.png 1x,
+                ./img/header/header-2x.png 2x
+              "
+            />
+            <img
+              class="image-wt"
+              src="./img/header/header-1x.png"
+              alt="Jefferson"
+            />
+          </picture>
+          <div>Let’s <span class="color-wt">work</span></div>
+          <span class="together">together</span>
+        </h2>
+        <form class="wt-feedback-form" autocomplete="off">
+          <label>
+            <input
+              class="wt-input"
+              type="email"
+              name="email"
+              pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+              autofocus
+              placeholder="clients@gmail.com"
+              required
+            />
+          </label>
+          <label>
+            <textarea
+              class="wt-textarea"
+              name="message"
+              rows="8"
+              placeholder="comments"
+              required
+            ></textarea>
+          </label>
+          <button class="wt-btn" type="submit">Send</button>
+        </form>
+        <ul class="wt-list">
+          <li class="wt-item">
+            <a href="mailto:lloydjefferson@gmail.com"
+              >lloydjefferson@gmail.com</a
+            >
+          </li>
+          <li class="wt-item">
+            <a href="tel:+380 11 1111 11 11">+380 11 1111 11 11</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Modal Window Footer -->
+      <div class="wt-modal-backdrop">
+        <div class="wt-modal">
+          <button class="wt-modal-close-button" type="button">
+            <svg class="wt-close-modal-icon">
+              <use href="./img/sprite.svg#close-modal"></use>
+            </svg>
+          </button>
+          <p class="wt-modal-title"></p>
+          <p class="wt-modal-message"></p>
+        </div>
+      </div>
+    </footer>
     <script type="module" src="./main.js" defer></script>
   </body>
 </html>

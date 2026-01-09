@@ -1,7 +1,12 @@
 const swiperWrapperRev = document.querySelector('.swiper-wrapper.reviews');
 
 export const createSlideCard = cards => {
+  if (!cards.length) {
+    swiperWrapperRev.innerHTML = '<p class="reviews-empty">Not found</p>';
+    return;
+  }
   const cardHTML = cards
+
     .map(
       card =>
         `
