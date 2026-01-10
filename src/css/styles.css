@@ -46,6 +46,7 @@ body {
   font-weight: 500;
   letter-spacing: -0.02em;
   color: #fafafa;
+  background-color: #1c1d20;
 }
 
 .container {
@@ -55,7 +56,6 @@ body {
   padding-right: 16px;
   margin-right: auto;
   margin-left: auto;
-  background-color: #1c1d20;
 }
 
 @media screen and (min-width: 768px) {
@@ -331,14 +331,16 @@ body {
 .hero-page .container {
   padding-top: 281px;
   padding-bottom: 32px;
-  position: relative;
+}
 
+.hero-page {
+  position: relative;
   background-image: url(../img/hero/hero-mobile-1x.png);
   background-size: calc(100% + 10px) 100%;
   background-repeat: no-repeat;
 }
 
-.hero-page .container::before {
+.hero-page::before {
   content: '';
   position: absolute;
   top: 0;
@@ -375,7 +377,7 @@ body {
 }
 
 @media screen and (max-width: 767px) and (min-resolution: 192dpi) {
-  .hero-page .container {
+  .hero-page {
     background-image: url(../img/hero/hero-mobile-2x.png);
   }
 }
@@ -426,11 +428,14 @@ body {
 @media screen and (min-width: 768px) {
   .hero-page .container {
     padding-top: 300px;
+  }
+
+  .hero-page {
     background-image: url(../img/hero/hero-tablet-1x.png);
   }
 
   @media screen and (max-width: 1339px) and (min-resolution: 192dpi) {
-    .hero-page .container {
+    .hero-page {
       background-image: url(../img/hero/hero-tablet-2x.png);
     }
   }
@@ -462,17 +467,20 @@ body {
 @media screen and (min-width: 1440px) {
   .hero-page .container {
     padding-top: 300px;
+  }
+
+  .hero-page {
     background-image: url(../img/hero/hero-desctop-1x.png);
     background-repeat: no-repeat;
-    background-size: 728px 100%;
+    background-size: 50% 100%;
     background-position: left top;
   }
 
-  @media screen and (min-resolution: 192dpi) {
-    .hero-page .container {
+  /* @media screen and (min-resolution: 192dpi) {
+    .hero-page {
       background-image: url(../img/hero/hero-desctop-2x.png);
     }
-  }
+  } */
 
   .title-main {
     max-width: 1084px;
@@ -1187,7 +1195,7 @@ body {
 /* -------------------end faq--------------------- */
 
 /* -------------------cover====------------------- */
-.page-cover .container {
+.page-cover {
   padding: 0;
   overflow: hidden;
   height: 508px;
@@ -1209,7 +1217,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .marquee__inner {
@@ -1253,7 +1261,7 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .page-cover .container {
+  .page-cover {
     height: 960px;
   }
 
@@ -1527,7 +1535,7 @@ body {
   }
 
   .wt-list .wt-item:last-child {
-    width: 173px;
+    width: 175px;
   }
 }
 
