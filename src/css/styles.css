@@ -476,11 +476,11 @@ body {
     background-position: left top;
   }
 
-  /* @media screen and (min-resolution: 192dpi) {
+  @media screen and (min-resolution: 192dpi) {
     .hero-page {
       background-image: url(../img/hero/hero-desctop-2x.png);
     }
-  } */
+  }
 
   .title-main {
     max-width: 1084px;
